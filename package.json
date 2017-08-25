@@ -5,12 +5,10 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint src --color",
-    "test": "NODE_ENV=testing mocha --require ignore-styles --require babel-core/register --reporter spec \"./**/__test__/*.js\" ",
     "build:prod": "NODE_ENV=production webpack -p --config webpack.config.js --progress",
     "build:dev": "NODE_ENV=development webpack-dev-server --progress --config webpack.config.js",
     "bundle:stats": "NODE_ENV=production webpack -p --config webpack.config.js --profile --json > stats.json",
-    "bundle:analyse": "webpack-bundle-analyzer ./stats.json ./build --report --mode=static",
-    "coverage": "NODE_ENV=testing nyc yarn test"
+    "bundle:analyse": "webpack-bundle-analyzer ./stats.json ./build --report --mode=static"
   },
   "dependencies": {
     "babel-plugin-import": "^1.1.0",
